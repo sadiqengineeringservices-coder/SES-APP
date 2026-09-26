@@ -1,8 +1,8 @@
 {
   "name": "ses-offline-desktop",
   "private": true,
-  "version": "1.0.0",
-  "description": "Sadiq Engineering Services - Offline Desktop Workshop App",
+  "version": "2.0.0",
+  "description": "Sadiq Engineering Services - Offline Desktop Workshop App (hardened: local multi-user auth + AES-256-GCM per-user encryption)",
   "author": "Sadiq Engineering Services",
   "type": "commonjs",
   "main": "electron-main.js",
@@ -13,10 +13,10 @@
     "preview": "vite preview",
     "typecheck": "tsc --noEmit -p tsconfig.app.json",
     "electron:start": "electron .",
+    "test:security": "node security-tests/run.js",
     "dist": "vite build && electron-builder --win nsis"
   },
   "dependencies": {
-    "@supabase/supabase-js": "^2.57.4",
     "lucide-react": "^0.446.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
